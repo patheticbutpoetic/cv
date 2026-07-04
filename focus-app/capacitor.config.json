@@ -1,0 +1,11 @@
+{
+  "appId": "com.adamsalaheldin.focuspomodoro",
+  "appName": "Focus Pomodoro",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  },
+  "ios": {
+    "contentInset": "automatic"
+  }
+}
