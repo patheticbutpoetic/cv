@@ -67,6 +67,8 @@ and re-run from Android Studio / Xcode.
 - The **desktop app blocker** (`../focus-blocker/`) is a PC tool; on phones,
   system-level app blocking isn't possible from an app without special
   permissions. The in-app distraction guard covers phone usage instead.
-- App icons/splash screens are currently Capacitor defaults. To use your own,
-  add `assets/icon.png` (1024×1024) and `assets/splash.png` (2732×2732) here and
-  run `npx @capacitor/assets generate`.
+- App icons and splash screens are generated from `assets/icon.png` and
+  `assets/splash*.png` and already applied to both platforms. To change the
+  branding, replace those files and run `npx @capacitor/assets generate`.
+- Ready to ship? See [`PUBLISHING.md`](PUBLISHING.md) for the full path to
+  Google Play and the App Store.
