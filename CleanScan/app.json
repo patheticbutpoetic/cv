@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "CleanScan",
+    "slug": "cleanscan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "scheme": "cleanscan",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F7F8FA"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "bundleIdentifier": "com.adam.cleanscan",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "CleanScan needs camera access so you can scan documents into PDFs.",
+        "NSPhotoLibraryUsageDescription": "CleanScan needs photo access so you can import images and turn them into PDFs.",
+        "NSPhotoLibraryAddUsageDescription": "CleanScan can save exported documents and images.",
+        "UIFileSharingEnabled": true,
+        "LSSupportsOpeningDocumentsInPlace": true
+      }
+    },
+    "android": {
+      "package": "com.adam.cleanscan",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "backgroundColor": "#F7F8FA"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        { "cameraPermission": "CleanScan needs camera access to scan documents." }
+      ],
+      [
+        "expo-image-picker",
+        { "photosPermission": "CleanScan needs access to your photos to import images." }
+      ],
+      "expo-sqlite",
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
